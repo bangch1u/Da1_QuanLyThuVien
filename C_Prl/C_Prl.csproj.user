@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="fMainView2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlyConNguoi\fNapDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlyConNguoi\fQuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlyConNguoi\fQuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlyConNguoi\fQuanLyTheThuVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlyPhieu\fMainGiaHan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlyPhieu\fMainMuonSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlyPhieu\fMainPhatDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlyPhieu\fMainTraSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlyPhieu\fQuaHanKhongTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlyPhieu\fQuanLyPM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlyPhieu\fQuanLyPMCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlyPhieu\fThemPM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlySach\fMainQuanLySach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlySach\fMainQuanLySachCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlySach\fQuanLySachCT1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlySach\fQuanLyThietHai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlySach\fSuaSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlySach\fTacGia_TheLoai_Sach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlySach\fThemNhaXuatBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlySach\fThemSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlySach\fThemSachCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlySach\fThemTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlySach\fThemTacGiaSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlySach\fThemTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="qlySach\fThemTheLoaiSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

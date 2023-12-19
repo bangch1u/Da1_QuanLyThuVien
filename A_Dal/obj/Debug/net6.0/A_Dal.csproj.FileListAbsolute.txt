@@ -1,0 +1,28 @@
+C:\Users\bang0\QuaMon\Da1_QuanLyThuVien\A_Dal\bin\Debug\net6.0\A_Dal.deps.json
+C:\Users\bang0\QuaMon\Da1_QuanLyThuVien\A_Dal\bin\Debug\net6.0\A_Dal.runtimeconfig.json
+C:\Users\bang0\QuaMon\Da1_QuanLyThuVien\A_Dal\bin\Debug\net6.0\A_Dal.dll
+C:\Users\bang0\QuaMon\Da1_QuanLyThuVien\A_Dal\bin\Debug\net6.0\A_Dal.pdb
+C:\Users\bang0\QuaMon\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\A_Dal.csproj.AssemblyReference.cache
+C:\Users\bang0\QuaMon\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\A_Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bang0\QuaMon\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\A_Dal.AssemblyInfoInputs.cache
+C:\Users\bang0\QuaMon\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\A_Dal.AssemblyInfo.cs
+C:\Users\bang0\QuaMon\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\A_Dal.csproj.CoreCompileInputs.cache
+C:\Users\bang0\QuaMon\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\A_Dal.dll
+C:\Users\bang0\QuaMon\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\refint\A_Dal.dll
+C:\Users\bang0\QuaMon\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\A_Dal.pdb
+C:\Users\bang0\QuaMon\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\A_Dal.genruntimeconfig.cache
+C:\Users\bang0\QuaMon\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\ref\A_Dal.dll
+C:\Users\bang0\video fb\Da1_QuanLyThuVien\A_Dal\bin\Debug\net6.0\A_Dal.deps.json
+C:\Users\bang0\video fb\Da1_QuanLyThuVien\A_Dal\bin\Debug\net6.0\A_Dal.runtimeconfig.json
+C:\Users\bang0\video fb\Da1_QuanLyThuVien\A_Dal\bin\Debug\net6.0\A_Dal.dll
+C:\Users\bang0\video fb\Da1_QuanLyThuVien\A_Dal\bin\Debug\net6.0\A_Dal.pdb
+C:\Users\bang0\video fb\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\A_Dal.csproj.AssemblyReference.cache
+C:\Users\bang0\video fb\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\A_Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bang0\video fb\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\A_Dal.AssemblyInfoInputs.cache
+C:\Users\bang0\video fb\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\A_Dal.AssemblyInfo.cs
+C:\Users\bang0\video fb\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\A_Dal.csproj.CoreCompileInputs.cache
+C:\Users\bang0\video fb\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\A_Dal.dll
+C:\Users\bang0\video fb\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\refint\A_Dal.dll
+C:\Users\bang0\video fb\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\A_Dal.pdb
+C:\Users\bang0\video fb\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\A_Dal.genruntimeconfig.cache
+C:\Users\bang0\video fb\Da1_QuanLyThuVien\A_Dal\obj\Debug\net6.0\ref\A_Dal.dll
