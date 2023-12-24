@@ -11,7 +11,7 @@ namespace B_Bus
 {
     public class Services : IServices
     {
-      
+      // test commit in mobile
         public static ISachRes SachRes = new SachRes(); //Khởi tạo biến Sách repos
         public static ISachCTRes SachCTRes = new SachChiTietRes(); //Khởi tạo biến Sách Chi tiết repos
         public static ITacGiaSachRes TacGiaSachRes = new TacGiaSachRes(); //Khởi tạo biến tác giả repos
