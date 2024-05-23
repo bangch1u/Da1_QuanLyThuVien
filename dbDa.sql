@@ -1,41 +1,161 @@
-
-
-create database QLBD2
+create database DBDA_TV
 go
-use QLBD2
+use DBDA_TV
 go
-create table BangDia
+create table Sach
 (
-	MaBD varchar(13) not null primary key,
-	TenBang nvarchar(100),
+	barCodeSach varchar(13) not null primary key,
+	tenSach nvarchar(100),
 	soLuong int,
+	giaTien money,
+	namXuatBan date
 );
 go
-create table  KhachHang
-(	MaKH varchar(13) not null primary key,
-	HoTen nvarchar(100),
-	SoLuongThue int,
-	NgayThue datetime,
-	SoNgayThue int,
-	ThanhTien money,
-	MaBD varchar(13) references BangDia(MaBD),
-	
+create table TacGia
+(
+	idTacGia varchar(13) not null primary key,
+	hoTen nvarchar(100),
+	ngaySinh date
 );
 go
-insert into BangDia (MaBD, TenBang, soLuong)
-values 
-('BD001', N'B? phim Marvel Avengers', 10),
-('BD002', N'B? phim Harry Potter', 8),
-('BD003', N'B? phim Fast & Furious', 15),
-('BD004', N'B? phim The Lord of the Rings', 12),
-('BD005', N'B? phim Star Wars', 7);
+create table TacGiaSach
+(
+	barCodeSach varchar(13) references Sach(barCodeSach),
+	idTacGia varchar(13) references TacGia(idTacGia),
+	moTa varchar(10),
+	PRIMARY KEY (barCodeSach, idTacGia)
+);
 go
-insert into KhachHang (MaKH, HoTen, SoLuongThue, NgayThue, SoNgayThue, ThanhTien, MaBD)
-values 
-('KH001', N'Nguy?n V�n A', 2, '2024-05-10', 3, 45000.00, 'BD001'),
-('KH002', N'Tr?n Th? B', 1, '2024-05-11', 2, 25000.00, 'BD003'),
-('KH003', N'L� Quang C', 3, '2024-05-12', 5, 75000.00, 'BD002'),
-('KH004', N'Ph?m Th? D', 2, '2024-05-13', 4, 50000.00, 'BD005'),
-('KH005', N'Hu?nh V�n E', 1, '2024-05-14', 1, 15000.00, 'BD004');
-
-select * from BangDia
+create table TheLoai
+(
+	idTheLoai varchar(13) primary key,
+	tenTheLoai nvarchar(50),
+	viTriKeSach varchar(10)
+);
+go
+create table ChiTietTheLoai
+(
+	idTheLoai varchar(13) references TheLoai(idTheLoai),
+	barCodeSach varchar(13) references Sach(barCodeSach),
+	moTa varchar(10),
+	primary key (idTheLoai, barCodeSach)
+);
+go
+create table NhanVien
+(
+	idNhanVien varchar(10) primary key,
+	hoTen nvarchar(50),
+	gioiTinh bit,
+	soDienThoai varchar(10),
+	diaChi nvarchar(150),
+	ngaySinh Date,
+	email varchar(100),
+	trangThai int ---1: ho?t đ?ng, 0: ngh? vi?c
+);
+go
+create table TaiKhoan
+(
+	idTaiKhoan varchar(10) primary key,
+	userName varchar(50),
+	[passWord] varchar(50),
+	idNhanVien varchar(10) unique references NhanVien(idNhanVien),
+	[role] int ----1: nhân viên, ---2: qu?n l?
+);
+create table TheThuVien 
+(
+	idTheThuVien varchar(10) primary key,
+	hoTen nvarchar(50),
+	soDienThoai varchar(10), 
+	diemUyTin int,
+	trangThai int, ---1: ho?t đ?ng|| 0: khóa th? || 2: ngưng ho?t đ?ng||
+);
+go
+create table LichSuNap
+(
+	idLichSu int identity(1,1) primary key,
+	soTienNap money,
+	diemCongUyTin int,
+	ngayNap date,
+	idTheThuVien varchar(10) references TheThuVien(idTheThuVien)
+);
+go
+create table MucDiemCong
+(
+	id int identity(1,1) primary key,
+	mucTien money,
+	soDiemCong int
+);
+create table PhieuMuon
+(	
+	idPhieuMuon varchar(10) primary key,
+	idTheThuVien varchar(10) unique references TheThuVien(idTheThuVien),
+	tongSachMuon int, 
+	ngayTaoPhieu date,
+	trangThai bit --0: full sách không th? mư?n|| 1: c?n có th? mư?n sách
+);
+go
+create table NhaXuatBan
+(
+	idNXB varchar(10) primary key,
+	tenNXB nvarchar(100),
+	diaChi nvarchar(150),
+	soDienThoai nvarchar(10)
+);
+go
+create table SachChiTiet
+(
+	barCodeMaSach varchar(13) primary key,
+	barCodeSach varchar(13) references Sach(barCodeSach),
+	tinhTrangSach nvarchar(50),
+	lanTaiBan int,
+	kichCo varchar(20),
+	namTaiBan int,
+	diemUyTinMin int,
+	trangThai int,
+	idNXB varchar(10) references NhaXuatBan(idNXB)
+);
+go
+create table PhieuMuonChiTiet
+(
+	idPhieuMuonChiTiet int identity(1,1) primary key,
+	idPhieuMuon varchar(10) references PhieuMuon(idPhieuMuon),
+	idNhanVien varchar(10) references NhanVien(idNhanVien),
+	barCodeMaSach varchar(13) references SachChiTiet(barCodeMaSach),
+	soLuongSach int,
+	ngayMuonSach date,
+	ngayTraSach date,
+	soLanGiaHan int,
+	trangThai int ---0: mư?n thành công, -1: mư?n th?t b?i, 2: gia h?n thành công, 3: quá s? l?n gia h?n
+);
+go
+create table PhieuTraSach
+(
+	idPhieuTra varchar(10) primary key,
+	soLuongTra int,
+	thoiGianTraSach date,
+	tinhTrangSach nvarchar(50),
+	barCodeMaSach varchar(13) references SachChiTiet(barCodeMaSach),
+	idPhieuMuon varchar(10) references PhieuMuon(idPhieuMuon),
+	trangThai bit
+);
+go
+create table ThietHai
+(
+	idThietHai varchar(10) primary key,
+	tenThietHai nvarchar(50),
+	diemTruUyTin int
+);
+go
+create table ThietHaiChiTiet
+(
+	idThietHai varchar(10) references ThietHai(idThietHai),
+	idPhieuTra varchar(10) references PhieuTraSach(idPhieuTra),
+	moTa nvarchar(100),
+	primary key ( idThietHai, idPhieuTra)
+);
+go
+INSERT INTO MucDiemCong (mucTien, soDiemCong) VALUES (100000, 10);
+INSERT INTO MucDiemCong (mucTien, soDiemCong) VALUES (200000, 50);
+INSERT INTO MucDiemCong (mucTien, soDiemCong) VALUES (300000, 100);
+INSERT INTO MucDiemCong (mucTien, soDiemCong) VALUES (400000, 150);
+INSERT INTO MucDiemCong (mucTien, soDiemCong) VALUES (500000, 200);
